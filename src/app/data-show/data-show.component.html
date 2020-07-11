@@ -1,0 +1,46 @@
+<app-nav-bar></app-nav-bar>
+<div class="container mt-5">
+  <div class="row tm-content-row">
+    <div class="col-12 tm-block-col">
+      <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+        <h2 class="tm-block-title">Select any Country</h2>
+
+        <select (change)="onDropdownSelect($event)" class="custom-select">
+          <option >- - Select Country - -</option>
+          <option *ngFor="let country of countries"  value="{{country.Country}}">{{country.Country}}</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- row -->
+  <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+    <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+      <h4 class="tm-block-title">{{countryNmae}} COVID-19 Status :</h4>
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Confirmed Cases</th>
+                <th scope="col">Total Deaths</th>
+                <th scope="col">Total Recovered</th>
+                <th scope="col">Active Cases</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of countryData">
+                <th scope="row"><b>{{data.Date}}</b></th>
+                <td>{{data.Confirmed}}</td>
+                <td><b>{{data.Deaths}}</b></td>
+                <td><b>{{data.Recovered}}</b></td>
+                <td><div class="tm-status-circle moving">
+                    </div><b>{{data.Active}}</b></td>
+
+            </tr>
+
+          </tbody>
+      </table>
+  </div>
+  </div>
+</div>
+

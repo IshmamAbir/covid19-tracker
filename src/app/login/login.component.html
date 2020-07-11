@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="col-12 text-center">
+    <h1 class="tm-block-title mb-5" > Welcome to Covid-19 Tracker</h1>
+  </div>
+</div>
+  <div class="container tm-mt-big tm-mb-big">
+    <div class="row">
+      <div class="col-12 mx-auto tm-login-col">
+        <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h5 class="tm-block-title mb-5">Use Default id:(ishmam) & password:(1233) to login</h5>
+
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <div  class="tm-login-form">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control validate"
+                    value="ishmam"
+                    placeholder="ishmam"
+                    [(ngModel)]="userName"
+                    required
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <label for="password">Password</label>
+                  <input
+
+                    type="password"
+                    class="form-control validate"
+                    value="1233"
+                    [(ngModel)]="password"
+                    required
+                  />
+                </div>
+                <div class="form-group mt-4">
+                  <p class="text-danger">{{message}}</p>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-block text-uppercase"
+                    (click)="onLoginClick()">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
