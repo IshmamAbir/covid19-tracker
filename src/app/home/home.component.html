@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<!-- <app-nav-bar></app-nav-bar> -->
 <div class="container mt-5">
   <div class="row tm-content-row">
     <div class="col-12 tm-block-col">
@@ -29,7 +29,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let data of countryData">
-                <th scope="row"><b>{{data.Date}}</b></th>
+                <th scope="row"><b>{{data.Date.substring(0,10)}}</b></th>
                 <td>{{data.Confirmed}}</td>
                 <td><b>{{data.Deaths}}</b></td>
                 <td><b>{{data.Recovered}}</b></td>

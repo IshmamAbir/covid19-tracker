@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto h-100">
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/home" href="#">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" href="#">
               <i class="fas fa-tachometer-alt"></i> Dashboard
               <span class="sr-only">(current)</span>
             </a>
@@ -45,7 +45,7 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="/account" href="#">
+            <a class="nav-link" routerLink="/account" routerLinkActive="active" href="#">
               <i class="far fa-user"></i> Accounts
             </a>
           </li>
